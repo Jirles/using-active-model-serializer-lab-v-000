@@ -14,9 +14,8 @@ $(function() {
         if(data["inventory"] === 0){
           inventoryText = "<strong>Sold Out</strong>";
         }
-        var descriptionText = "<p>" + data["description"] + "</p><p>" + inventoryText + "</p><strong>Orders</strong><ul>";
-        data["orders"].map(order => descriptionText += "<li>" + order["id"] + ": " + order["created_at"] + "</li>");
-        $("#product-" + id).html(descriptionText + "</ul>");
+        var descriptionText = "<p>" + data["description"] + "</p><p>" + inventoryText + "</p>"
+        $("#product-" + id).html(descriptionText);
       });
     });
   });
